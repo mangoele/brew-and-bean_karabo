@@ -17,12 +17,25 @@ const redis = new Redis({
 });
 
 // Middleware
+const allowedOrigins = [
+    "http://localhost:5173",
+    process.env.FRONTEND_URL
+].filter(Boolean);
+
 app.use(cors({
-    origin: "http://localhost:5173"
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    }
 }));
 
+// Parse incoming JSON and URL-encoded request bodies.
+// These must be registered before API routes that read req.body.
 app.use(express.json());
-
+app.use(express.urlencoded({ extended: true }));
 
 // STAFF LOGIN
 app.post("/api/staff/login", async (req, res) => {
@@ -359,7 +372,7 @@ app.post("/api/menu", authenticateStaff, async (req, res) => {
     }
 });
 
- // PUT - Update an existing menu item
+// PUT - Update an existing menu item
 app.put("/api/menu/:id", authenticateStaff, async (req, res) => {
     try {
         const { id } = req.params;
@@ -428,7 +441,7 @@ app.put("/api/menu/:id", authenticateStaff, async (req, res) => {
     }
 });
 
- // DELETE a menu item
+// DELETE a menu item
 app.delete("/api/menu/:id", authenticateStaff, async (req, res) => {
     try {
         const { id } = req.params;
@@ -474,7 +487,7 @@ app.delete("/api/menu/:id", authenticateStaff, async (req, res) => {
     }
 });
 
- // POST - Place a customer order
+// POST - Place a customer order
 app.post("/api/orders", async (req, res) => {
     try {
         const { customerName, customerPhone, items } = req.body;
@@ -603,7 +616,7 @@ app.post("/api/orders", async (req, res) => {
     }
 });
 
- // GET all customer orders
+// GET all customer orders
 app.get("/api/orders", authenticateStaff, async (req, res) => {
     try {
         // Retrieve orders from Redis
@@ -630,7 +643,7 @@ app.get("/api/orders", authenticateStaff, async (req, res) => {
     }
 });
 
- // GET one customer order by ID
+// GET one customer order by ID
 app.get("/api/orders/:id", authenticateStaff, async (req, res) => {
     try {
         const { id } = req.params;
@@ -668,7 +681,9 @@ app.get("/api/orders/:id", authenticateStaff, async (req, res) => {
 });
 
 
- // PATCH - Update customer order status
+
+
+// PATCH - Update customer order status
 app.patch("/api/orders/:id/status", authenticateStaff, async (req, res) => {
     try {
         const { id } = req.params;
@@ -732,7 +747,7 @@ app.patch("/api/orders/:id/status", authenticateStaff, async (req, res) => {
     }
 });
 
- // GET daily order summary
+// GET daily order summary
 app.get("/api/orders/summary/daily", authenticateStaff, async (req, res) => {
     try {
         // Use the requested date or today's date in Lesotho
@@ -830,7 +845,6 @@ app.get("/api/orders/summary/daily", authenticateStaff, async (req, res) => {
         });
     }
 });
-
 
 // Handle unknown routes
 app.use((req, res) => {

@@ -1077,3 +1077,235 @@
     max-width: none;
   }
 }
+
+
+
+
+
+
+/* ==========================================
+   BREW & BEAN — STAFF DASHBOARD THEME
+   ========================================== */
+
+.staff-dashboard {
+  --staff-espresso: #2B1A14;
+  --staff-dark: #3A241B;
+  --staff-caramel: #B87948;
+  --staff-terracotta: #B85F43;
+  --staff-olive: #747957;
+  --staff-cream: #F6EFE5;
+  --staff-light: #FBF8F2;
+  --staff-border: #E8D9C8;
+
+  background: var(--staff-cream);
+  color: var(--staff-espresso);
+}
+
+/* Header */
+.staff-header {
+  background: var(--staff-light);
+  border-bottom-color: var(--staff-border);
+}
+
+.staff-brand-icon {
+  background: var(--staff-espresso);
+}
+
+.staff-brand > span:not(.staff-brand-icon) {
+  color: var(--staff-terracotta);
+}
+
+.staff-account {
+  color: var(--staff-dark);
+}
+
+.staff-account button {
+  border-color: var(--staff-dark);
+  color: var(--staff-dark);
+  transition: 0.2s ease;
+}
+
+.staff-account button:hover {
+  background: var(--staff-dark);
+  color: white;
+}
+
+/* Dashboard headings */
+.staff-eyebrow,
+.staff-stat-label {
+  color: var(--staff-caramel);
+}
+
+.staff-welcome h1,
+.staff-section-heading h2 {
+  color: var(--staff-espresso);
+}
+
+.staff-welcome p,
+.staff-stat-description,
+.staff-order-count {
+  color: #796B5F;
+}
+
+/* Refresh button */
+.staff-refresh-button {
+  background: var(--staff-espresso);
+  border-color: var(--staff-espresso);
+}
+
+.staff-refresh-button:hover {
+  background: var(--staff-terracotta);
+  border-color: var(--staff-terracotta);
+}
+
+/* Statistics cards */
+.staff-stat-card {
+  background: var(--staff-light);
+  border-color: var(--staff-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.staff-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px #2B1A1410;
+}
+
+.staff-stat-card strong {
+  color: var(--staff-espresso);
+}
+
+/* Orders and summary panels */
+.staff-orders-section,
+.staff-summary-section {
+  background: var(--staff-light);
+  border-color: var(--staff-border);
+}
+
+/* Orders table */
+.staff-orders-table th {
+  background: #EFE4D6;
+  color: var(--staff-dark);
+}
+
+.staff-orders-table td {
+  border-bottom-color: var(--staff-border);
+  color: var(--staff-dark);
+}
+
+.staff-orders-table tbody tr:hover {
+  background: #F8F0E6;
+}
+
+.staff-order-number {
+  color: var(--staff-terracotta) !important;
+}
+
+/* Order status badges */
+.staff-status {
+  border-radius: 20px;
+  padding: 7px 11px;
+  font-weight: 600;
+}
+
+.staff-status.status-pending {
+  background: #F8E8C9;
+  color: #85591F;
+}
+
+.staff-status.status-preparing {
+  background: #F2DFD0;
+  color: #96502F;
+}
+
+.staff-status.status-ready {
+  background: #E7E9D9;
+  color: #58613C;
+}
+
+.staff-status.status-collected {
+  background: #F3DFD5;
+  color: #984E36;
+}
+
+/* Search and filters */
+.staff-order-tools input,
+.staff-order-tools select,
+.staff-status-select {
+  border-color: var(--staff-border);
+  background: white;
+  color: var(--staff-dark);
+}
+
+.staff-order-tools input:focus,
+.staff-order-tools select:focus,
+.staff-status-select:focus {
+  outline: none;
+  border-color: var(--staff-terracotta);
+}
+
+/* Action buttons */
+.staff-view-order-button {
+  border-color: var(--staff-dark);
+  color: var(--staff-dark);
+  transition: 0.2s ease;
+}
+
+.staff-view-order-button:hover {
+  background: var(--staff-terracotta);
+  border-color: var(--staff-terracotta);
+  color: white;
+}
+
+/* Order detail modal */
+.staff-order-modal {
+  background: var(--staff-light);
+}
+
+.staff-modal-heading,
+.staff-modal-items {
+  border-color: var(--staff-border);
+}
+
+.staff-special-request {
+  background: #EFE4D6;
+}
+
+.staff-modal-heading button {
+  border-color: var(--staff-border);
+}
+
+/* Messages */
+.staff-success-message {
+  border-color: #D6DDC4;
+  background: #EDF0E3;
+  color: #58613C;
+}
+
+.staff-dashboard-error {
+  border-color: #E7B7B0;
+  background: #FCEBEA;
+  color: #A33B32;
+}
+
+/* Empty state */
+.staff-empty-state h3 {
+  color: var(--staff-espresso);
+}
+
+.staff-empty-state {
+  color: #796B5F;
+}
+
+/* Status summary cards */
+.staff-status-card {
+  background: #EFE4D6;
+  border: 1px solid var(--staff-border);
+}
+
+.staff-status-card span {
+  color: #796B5F;
+}
+
+.staff-status-card strong {
+  color: var(--staff-espresso);
+}

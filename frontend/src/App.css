@@ -1031,3 +1031,215 @@ a {
     padding: 14px;
   }
 }
+
+
+
+
+
+
+
+
+
+/* =========================================
+   BREW & BEAN — WARM COFFEE COLOUR UPDATE
+   ========================================= */
+
+:root {
+  --coffee-espresso: #2B1A14;
+  --coffee-dark: #3A241B;
+  --coffee-caramel: #B87948;
+  --coffee-terracotta: #B85F43;
+  --coffee-olive: #747957;
+  --coffee-cream: #F6EFE5;
+  --coffee-light: #FBF8F2;
+  --coffee-border: #E8D9C8;
+  --coffee-muted: #796B5F;
+}
+
+/* Main backgrounds and text */
+.app {
+  background: var(--coffee-cream);
+  color: var(--coffee-espresso);
+}
+
+.navbar {
+  background: var(--coffee-light);
+  border-bottom-color: var(--coffee-border);
+}
+
+.brand-icon {
+  background: var(--coffee-espresso);
+  color: var(--coffee-light);
+}
+
+.brand-amp,
+.hero-content h1 span {
+  color: var(--coffee-terracotta);
+}
+
+.nav-links a {
+  color: var(--coffee-muted);
+}
+
+.nav-links a:hover {
+  color: var(--coffee-terracotta);
+}
+
+/* Buttons */
+.cart-button {
+  border-color: var(--coffee-dark);
+  color: var(--coffee-dark);
+}
+
+.cart-button:hover {
+  background: var(--coffee-dark);
+  color: white;
+}
+
+.cart-count {
+  background: var(--coffee-terracotta);
+}
+
+.primary-button,
+.quick-add,
+.checkout-button {
+  background: var(--coffee-espresso);
+}
+
+.primary-button:hover,
+.quick-add:hover,
+.checkout-button:hover {
+  background: var(--coffee-terracotta);
+}
+
+/* Accent details */
+.eyebrow,
+.hero-note span,
+.image-caption span,
+.product-category,
+.search-box > span {
+  color: var(--coffee-caramel);
+}
+
+.eyebrow-line {
+  background: var(--coffee-caramel);
+}
+
+.text-button {
+  border-bottom-color: var(--coffee-terracotta);
+}
+
+.text-button:hover,
+.add-button:hover {
+  color: var(--coffee-terracotta);
+}
+
+/* Highlights strip */
+.highlights {
+  background: var(--coffee-dark);
+  color: var(--coffee-light);
+}
+
+.highlights > div span {
+  color: #E2A36D;
+}
+
+/* Menu */
+.menu-section {
+  background: var(--coffee-light);
+}
+
+.search-box {
+  background: #FFFFFF;
+  border-color: var(--coffee-border);
+}
+
+.filter {
+  border-color: var(--coffee-border);
+  color: var(--coffee-dark);
+}
+
+.filter:hover,
+.filter.active {
+  background: var(--coffee-terracotta);
+  border-color: var(--coffee-terracotta);
+  color: white;
+}
+
+.product-card {
+  background: #FFFFFF;
+  border: 1px solid var(--coffee-border);
+}
+
+.product-card:hover {
+  box-shadow: 0 14px 35px #2B1A1418;
+}
+
+.product-image {
+  background: var(--coffee-cream);
+}
+
+.product-tag {
+  background: var(--coffee-cream);
+  color: var(--coffee-dark);
+}
+
+.quick-add {
+  background: var(--coffee-terracotta);
+}
+
+.add-button {
+  color: var(--coffee-dark);
+  border-top-color: var(--coffee-border);
+}
+
+/* Our story */
+.about-section {
+  background: #EDE1D2;
+}
+
+.about-content h2 {
+  color: var(--coffee-espresso);
+}
+
+/* Cart and checkout */
+.cart-drawer,
+.checkout-modal,
+.confirmation-modal {
+  background: var(--coffee-light);
+}
+
+.drawer-heading,
+.cart-footer,
+.cart-item {
+  border-color: var(--coffee-border);
+}
+
+.close-button {
+  border-color: var(--coffee-border);
+  color: var(--coffee-dark);
+}
+
+.checkout-modal input:focus,
+.checkout-modal textarea:focus {
+  border-color: var(--coffee-terracotta);
+}
+
+.checkout-total {
+  border-color: var(--coffee-border);
+}
+
+.confirmation-details {
+  background: #EDE1D2;
+}
+
+/* Footer */
+.footer {
+  background: var(--coffee-espresso);
+  color: var(--coffee-light);
+}
+
+.footer-brand .brand-icon {
+  background: var(--coffee-caramel);
+  color: white;
+}
